@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>sample</title>
+</head>
+<body>
+
+
+
+
+	JSの検証は<br>
+	<div>
+	<input type="button" name="" value="アラート" onclick="hello();"><!-- HTML側にonclickをかく -->
+	<!-- 直接Javaを書き込むこともできるが、複雑になって行くので関数にする。 -->
+	</div>
+<!-- 以下２行追加 -->
+	<p id="change_name">名前</p>
+	<input type="button" value="書き換え" onclick="change_text('change_name','名前書き換えました');">
+	<p id="change_msg">メッセージ</p>
+	<input type="button" value="書き換え" onclick="change_text('change_msg','メッセージ書き換えました');">
+<br>
+<!-- 以下三行追加 -->
+	<input type="text" id="number1"> +
+	<input type="text" id="number2">
+	<input type="button" value="足し算" onclick="var res = plus();//一旦戻り値をresに代入
+		document.getElementById('plusanswer').value=res;">
+	<!--いろんなところに使えるようにできる。 -->
+<br>
+	足し算結果
+	<input type="text" id="plusanswer">
+
+
+
+
+
+
+
+	<script src="script.js"></script>
+		<!--見せたい情報（HTML）を先に見せ、裏で動的な処理をするためにBodyの最後に入れるのが一般的-->
+</body>
+</html>
